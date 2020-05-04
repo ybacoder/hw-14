@@ -35,7 +35,7 @@ dt = DecisionTreeRegressor()
 dt_mean = cross_validate(dt, X, y, scoring="neg_mean_squared_error")["test_score"].mean()
 
 ## Random Forest
-rf = RandomForestRegressor()
+rf = RandomForestRegressor(random_state=468)
 rf_mean = cross_validate(rf, X, y, scoring="neg_mean_squared_error")["test_score"].mean()
 
 rf.fit(X, y)
